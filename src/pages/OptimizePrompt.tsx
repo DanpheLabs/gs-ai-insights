@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
-import { MoreVertical, Plus, Send } from "lucide-react";
+import { MoreVertical, Plus, Sparkles } from "lucide-react";
 import {
   Select,
   SelectContent,
@@ -26,67 +26,29 @@ export default function OptimizePrompt() {
         </div>
 
         <div className="flex-1 overflow-y-auto p-6 space-y-6">
-          <div className="flex justify-end">
-            <div className="max-w-2xl">
-              {/* <Badge className="mb-2 bg-primary text-primary-foreground block ml-auto">YOU</Badge> */}
-              <div className="bg-muted p-4 rounded-lg">
-                <p>What is a chat bot?</p>
-              </div>
-            </div>
+          <div className="space-y-2">
+            <label className="text-sm font-medium">Input Prompt:</label>
+            <Textarea 
+              placeholder="Enter your prompt here to optimize it..."
+              className="min-h-[200px] resize-none"
+            />
           </div>
 
-          <div className="flex justify-start">
-            <div className="max-w-2xl">
-              {/* <Badge variant="secondary" className="mb-2">
-                BOT
-              </Badge> */}
-              <div className="bg-primary/30 border border-border p-4 rounded-lg">
-                <p className="text-sm leading-relaxed">
-                  At the most basic level, a chatbot is a computer program that simulates and
-                  processes human conversation (either written or spoken), allowing humans to
-                  interact with digital devices as if they were communicating with a real person.
-                  Chatbots can be as simple as rudimentary programs that answer a simple query with
-                  a single-line response, or as sophisticated as digital assistants that learn and
-                  evolve to deliver increasing levels of personalization as they gather and process
-                  information.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex justify-end">
-            <div className="max-w-2xl">
-              {/* <Badge className="mb-2 bg-primary  text-primary-foreground">YOU</Badge> */}
-              <div className="bg-muted p-4 rounded-lg">
-                <p>How do chatbots work?</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex justify-start">
-            <div className="max-w-2xl">
-              {/* <Badge variant="secondary" className="mb-2">
-                BOT
-              </Badge> */}
-              <div className="bg-primary/30 border border-border p-4 rounded-lg">
-                <p className="text-sm leading-relaxed">
-                  Chatbots boost operational efficiency and bring cost savings to businesses while
-                  offering convenience and added services to internal employees and external
-                  customers. They allow companies to easily resolve many types of customer queries
-                  and issues while reducing the need for human interaction.
-                </p>
-              </div>
-            </div>
+          <div className="space-y-2">
+            <label className="text-sm font-medium">Optimized Output:</label>
+            <Textarea 
+              placeholder="Optimized prompt will appear here..."
+              className="min-h-[200px] resize-none bg-muted"
+              readOnly
+            />
           </div>
         </div>
 
         <div className="p-6 border-t border-border">
-          <div className="flex gap-2">
-            <Input placeholder="Send a message..." className="flex-1" />
-            <Button size="icon">
-              <Send className="h-4 w-4" />
-            </Button>
-          </div>
+          <Button className="w-full gap-2">
+            <Sparkles className="h-4 w-4" />
+            OPTIMIZE PROMPT
+          </Button>
         </div>
       </div>
 
