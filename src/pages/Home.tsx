@@ -56,7 +56,7 @@ export default function Home() {
       </div>
 
       <aside
-        className="w-80 border-l border-border p-8 bg-gray-50 overflow-hidden flex flex-col"
+        className="w-80 border-l border-border p-8 bg-muted overflow-hidden flex flex-col"
         style={{ height: "calc(100vh - var(--nav-height, 64px))" }}
       >
         <h2 className="text-2xl font-bold bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent mb-4">

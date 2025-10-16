@@ -63,10 +63,10 @@ export function AppSidebar() {
 
   return (
     <Sidebar className={isCollapsed ? "w-24" : "w-64"} collapsible="icon">
-      <SidebarContent className="bg-gray-100 ">
+      <SidebarContent className="bg-muted">
         <div>
           <div className="flex items-center justify-between">
-            <div className={`flex items-center gap-2 p-3 text-xl font-bold text-black ${isCollapsed ? "justify-center" : ""}`}>
+            <div className={`flex items-center gap-2 p-3 text-xl font-bold ${isCollapsed ? "justify-center" : ""}`}>
               {!isCollapsed ? "REVEAL PROMPT" : "R"}
             </div>
             <SidebarTrigger>

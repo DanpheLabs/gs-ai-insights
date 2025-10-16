@@ -39,38 +39,39 @@ export default function Changelog() {
     <div className="p-8 bg-background">
       <h1 className="text-3xl font-bold mb-8">Changelog</h1>
 
-      <div className=" space-y-6">
+      <div className="space-y-4 max-w-5xl">
         {versions.map((version) => (
-          <Card key={version.version}>
-            <CardHeader>
+          <Card key={version.version} className="rounded-xl">
+            <CardHeader className="pb-3">
               <div className="flex justify-between items-center">
-                <h2 className="text-2xl font-bold">{version.version}</h2>
-                <span className="text-sm text-muted-foreground">{version.date}</span>
+                <h2 className="text-xl font-bold">{version.version}</h2>
+                <span className="text-xs text-muted-foreground">{version.date}</span>
               </div>
             </CardHeader>
-            <CardContent className="space-y-6 md:flex md:space-y-0 md:gap-6 md:items-start">
+            <CardContent className="grid md:grid-cols-3 gap-4">
               {version.changes.map((change, i) => (
-              <div key={i} className="md:flex-1">
-                <Badge
-                variant={
-                  change.type === "NEW"
-                  ? "default"
-                  : change.type === "UPDATE"
-                  ? "secondary"
-                  : "outline"
-                }
-                className="mb-3"
-                >
-                {change.type}
-                </Badge>
-                <ul className="space-y-2 ml-4 list-disc">
-                {change.items.map((item, j) => (
-                  <li key={j} className="text-sm text-muted-foreground">
-                  {item}
-                  </li>
-                ))}
-                </ul>
-              </div>
+                <div key={i} className="space-y-2">
+                  <Badge
+                    variant={
+                      change.type === "NEW"
+                        ? "default"
+                        : change.type === "UPDATE"
+                        ? "secondary"
+                        : "outline"
+                    }
+                    className="text-xs"
+                  >
+                    {change.type}
+                  </Badge>
+                  <ul className="space-y-1">
+                    {change.items.map((item, j) => (
+                      <li key={j} className="text-xs text-muted-foreground leading-relaxed flex gap-2">
+                        <span className="text-primary mt-1">•</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               ))}
             </CardContent>
           </Card>

@@ -52,7 +52,7 @@ export default function OptimizePrompt() {
         </div>
       </div>
 
-      <aside className="w-80 border-l border-border bg-gray-100">
+      <aside className="w-80 border-l border-border bg-muted">
         <div className="p-4 border-b border-border flex items-center justify-between">
           <Button className="flex-1 gap-2">
             <Plus className="h-4 w-4" />
