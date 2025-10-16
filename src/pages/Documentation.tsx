@@ -135,10 +135,10 @@ export default function Documentation() {
   return (
     <div className="flex h-[calc(100vh-4rem)]">
       <div className="flex-1 p-12 bg-background overflow-y-auto">
-        <h1 className="text-3xl font-bold mb-8">Documentation</h1>
+        <h1 className="text-3xl font-medium mb-8">Documentation</h1>
 
         <div className="max-w-3xl">
-          <h2 className="text-2xl font-bold mb-6">{currentContent.title}</h2>
+          <h2 className="text-2xl font-medium mb-6">{currentContent.title}</h2>
           {currentContent.body}
         </div>
       </div>

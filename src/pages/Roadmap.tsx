@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 
-export default function Changelog() {
+export default function Roadmap() {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
 
@@ -126,7 +126,7 @@ export default function Changelog() {
 
   return (
     <div className="p-8 bg-background min-h-screen">
-      <h1 className="text-3xl font-bold mb-12 text-center">Changelog</h1>
+      <h1 className="text-3xl font-medium mb-12 text-center">Roadmap</h1>
 
       <div className="max-w-4xl mx-auto relative">
         {/* Vertical Timeline Line */}
@@ -142,10 +142,10 @@ export default function Changelog() {
             >
               {/* Card */}
               <div className="w-full md:w-[calc(50%-2rem)]">
-                <Card className="rounded-xl border-border hover:border-primary/50 transition-colors">
+                <Card className="rounded-sm border-border hover:border-primary/50 transition-colors">
                   <CardContent className="p-6">
                     <div className="flex justify-between items-center mb-4">
-                      <h2 className="text-lg font-bold">{version.version}</h2>
+                      <h2 className="text-lg font-medium">{version.version}</h2>
                       <span className="text-xs text-muted-foreground">{version.date}</span>
                     </div>
                     <div className="space-y-3">
@@ -179,7 +179,7 @@ export default function Changelog() {
               </div>
 
               {/* Timeline Dot */}
-              <div className="hidden md:flex w-4 h-4 rounded-full bg-primary border-4 border-background shadow-lg flex-shrink-0 z-10" />
+              <div className="hidden md:flex w-4 h-4 rounded-sm bg-primary border-4 border-background shadow-lg flex-shrink-0 z-10" />
 
               {/* Empty space for alternating layout */}
               <div className="hidden md:block w-[calc(50%-2rem)]" />

@@ -22,12 +22,12 @@ export default function RevealPrompt() {
     <div className="flex h-[calc(100vh-4rem)]">
       <div className="flex-1 flex flex-col bg-background">
         <div className="p-5 border-b border-border">
-          <h1 className="text-2xl font-bold">Reveal Prompt</h1>
+          <h1 className="text-2xl font-medium">Reveal Prompt</h1>
         </div>
 
         <div className="flex-1 overflow-y-auto p-6 space-y-6">
           <div className="space-y-2">
-            <label className="text-sm font-medium">Input Text:</label>
+            <label className="text-sm font-light">Input Text:</label>
             <Textarea 
               placeholder="Enter AI-generated text here to reveal the prompt..."
               className="min-h-[200px] resize-none"
@@ -35,21 +35,24 @@ export default function RevealPrompt() {
           </div>
 
           <div className="space-y-2">
-            <label className="text-sm font-medium">Revealed Prompt:</label>
+            <label className="text-sm font-light">Revealed Prompt:</label>
             <Textarea 
               placeholder="Original prompt will appear here..."
-              className="min-h-[200px] resize-none bg-muted"
+              className="min-h-[200px] resize-none bg-primary/5"
               readOnly
             />
           </div>
+             <div className="p-6 border-t border-border">
+            <div className="flex justify-center">
+            <Button className="gap-2">
+              <Eye className="h-4 w-4" />
+              Reveal Prompt
+            </Button>
+            </div>
+        </div>
         </div>
 
-        <div className="p-6 border-t border-border">
-          <Button className="w-full gap-2">
-            <Eye className="h-4 w-4" />
-            REVEAL PROMPT
-          </Button>
-        </div>
+     
       </div>
 
       <aside className="w-80 border-l border-border bg-muted">
@@ -61,7 +64,7 @@ export default function RevealPrompt() {
         </div>
 
         <div className="p-4 border-b border-border">
-          <label className="text-sm font-medium mb-2 block">AI Model:</label>
+          <label className="text-sm font-light mb-2 block">AI Model:</label>
           <Select defaultValue="gpt4">
             <SelectTrigger>
               <SelectValue />
@@ -75,12 +78,12 @@ export default function RevealPrompt() {
         </div>
 
         <div className="p-4">
-          <div className="text-sm font-medium mb-2">TODAY</div>
+          <div className="text-sm font-light mb-2">TODAY</div>
           <div className="space-y-1">
             {chats.map((chat) => (
               <div
                 key={chat.id}
-                className="flex items-center justify-between p-2 hover:bg-muted rounded-xl cursor-pointer"
+                className="flex items-center justify-between p-2 hover:bg-muted rounded-sm cursor-pointer"
               >
                 <span className="text-sm truncate flex-1">{chat.title}</span>
                 <Button variant="ghost" size="icon" className="h-6 w-6">

@@ -38,7 +38,7 @@ const menuItems = [
         icon: BookOpen,
         subItems: [
           { title: "Documentation", url: "/documentation" },
-          { title: "Changelog", url: "/changelog", badge: "(4.1.2)" },
+          { title: "Roadmap", url: "/Roadmap", badge: "(4.1.2)" },
           { title: "Contact Us", url: "/contact" },
         ],
       },
@@ -66,7 +66,7 @@ export function AppSidebar() {
       <SidebarContent className="bg-muted">
         <div>
           <div className="flex items-center justify-between">
-            <div className={`flex items-center gap-2 p-3 text-xl font-bold ${isCollapsed ? "justify-center" : ""}`}>
+            <div className={`flex items-center gap-2 p-3 text-xl font-medium  ${isCollapsed ? "justify-center" : ""}`}>
               {!isCollapsed ? "REVEAL PROMPT" : "R"}
             </div>
             <SidebarTrigger>
@@ -78,7 +78,7 @@ export function AppSidebar() {
             {menuItems.map((section) => (
               <SidebarGroup key={section.section}>
                 {!isCollapsed && (
-                  <SidebarGroupLabel className="text-xs text-muted-foreground font-semibold px-3 mb-2">
+                  <SidebarGroupLabel className="text-xs text-muted-foreground  font-semibold  px-3 mb-2">
                     {section.section}
                   </SidebarGroupLabel>
                 )}
@@ -86,14 +86,14 @@ export function AppSidebar() {
                   <SidebarMenu>
                     {section.items.map((item) =>
                       item.subItems ? (
-                        <Collapsible key={item.title} className="group/collapsible" defaultOpen>
+                        <Collapsible key={item.title} className=" text-gray-400 group/collapsible" defaultOpen>
                           <SidebarMenuItem>
                             <CollapsibleTrigger asChild>
                               <SidebarMenuButton
                                 className={`w-full ${isCollapsed ? "justify-center" : "justify-between"}`}
                               >
                                 <div className="flex items-center gap-3">
-                                  {item.icon && <item.icon className="h-4 w-4" />}
+                                  {item.icon && <item.icon className="h-4 w-4 text-gray-400 " />}
                                   {!isCollapsed && <span>{item.title}</span>}
                                 </div>
                                 {!isCollapsed && (
@@ -103,7 +103,7 @@ export function AppSidebar() {
                             </CollapsibleTrigger>
                             {!isCollapsed && (
                               <CollapsibleContent>
-                                <SidebarMenu className="ml-4 border-l border-border pl-4 mt-1">
+                                <SidebarMenu className="ml-4 border-l text-gray-400 border-border pl-4 mt-1">
                                   {item.subItems.map((subItem) => (
                                     <SidebarMenuItem key={subItem.title}>
                                       <SidebarMenuButton asChild isActive={isActive(subItem.url)}>
@@ -124,7 +124,7 @@ export function AppSidebar() {
                       ) : (
                         <SidebarMenuItem key={item.title}>
                           <SidebarMenuButton asChild isActive={isActive(item.url)}>
-                            <NavLink to={item.url} className="flex items-center gap-3">
+                            <NavLink to={item.url} className="flex text-gray-400 items-center gap-3">
                               {item.icon && <item.icon className="h-4 w-4" />}
                               {!isCollapsed && <span>{item.title}</span>}
                             </NavLink>

@@ -35,7 +35,7 @@ export function Layout({ children }: LayoutProps) {
             <div className="flex items-center gap-4 ">
 
               <div className="flex items-center gap-2 px-4 py-2 bg-muted rounded-xs">
-                <span className="text-sm font-bold">120</span>
+                <span className="text-sm font-medium">120</span>
                 <div className="text-xs text-muted-foreground">
                   <div>credit left</div>
                 </div>
@@ -73,7 +73,7 @@ export function Layout({ children }: LayoutProps) {
                       </Avatar>
                       <div className="flex-1">
                         <div className="flex items-center gap-2">
-                          <span className="font-medium">Caden Smith</span>
+                          <span className="font-light">Caden Smith</span>
                           <Badge className="bg-primary text-primary-foreground text-xs">FREE</Badge>
                         </div>
                         <div className="text-xs text-muted-foreground">cadmail@gmail.com</div>

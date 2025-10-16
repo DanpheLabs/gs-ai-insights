@@ -32,9 +32,9 @@ export default function Contact() {
         </div>
       </div>
       <div className="max-w-2xl mx-auto">
-        <Card className="rounded-xl">
+        <Card className="rounded-sm">
           <CardContent className="p-8">
-            <h1 className="text-2xl font-bold mb-6 text-center">Contact Us</h1>
+            <h1 className="text-2xl font-medium mb-6 text-center">Contact Us</h1>
 
             <p className="text-muted-foreground mb-8">
               Please fill out the form with your contact information and a detailed message, and

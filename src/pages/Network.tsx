@@ -43,22 +43,22 @@ export default function Network() {
 
   return (
     <div className="p-8 bg-background min-h-screen">
-      <h1 className="text-3xl font-bold mb-8">Network Overview</h1>
+      <h1 className="text-3xl font-medium mb-8">Network Overview</h1>
 
       {/* Key Metrics */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         {metrics.map((metric) => (
-          <Card key={metric.label} className="rounded-xl">
+          <Card key={metric.label} className="rounded-sm">
             <CardContent className="p-6">
               <div className="flex items-start justify-between">
                 <div>
                   <p className="text-xs text-muted-foreground mb-1">{metric.label}</p>
-                  <h3 className="text-2xl font-bold mb-2">{metric.value}</h3>
+                  <h3 className="text-2xl font-medium mb-2">{metric.value}</h3>
                   <Badge variant="secondary" className="text-xs">
                     {metric.trend}
                   </Badge>
                 </div>
-                <div className="p-3 rounded-lg bg-primary/10">
+                <div className="p-3 rounded-sm bg-primary/10">
                   <metric.icon className="h-5 w-5 text-primary" />
                 </div>
               </div>
@@ -68,7 +68,7 @@ export default function Network() {
       </div>
 
       {/* Achievements */}
-      <Card className="rounded-xl mb-8">
+      <Card className="rounded-sm mb-8">
         <CardHeader>
           <CardTitle>Network Achievements</CardTitle>
         </CardHeader>
@@ -77,14 +77,14 @@ export default function Network() {
             {achievements.map((achievement) => (
               <div
                 key={achievement.title}
-                className="p-4 rounded-lg border border-border hover:border-primary/50 transition-colors"
+                className="p-4 rounded-sm border border-border hover:border-primary/50 transition-colors"
               >
                 <div className="flex items-center gap-3">
-                  <div className="p-2 rounded-lg bg-primary/10">
+                  <div className="p-2 rounded-sm bg-primary/10">
                     <achievement.icon className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-medium text-sm">{achievement.title}</h4>
+                    <h4 className="font-light text-sm">{achievement.title}</h4>
                     <p className="text-xs text-muted-foreground">{achievement.description}</p>
                   </div>
                 </div>
@@ -103,7 +103,7 @@ export default function Network() {
         </TabsList>
 
         <TabsContent value="miners">
-          <Card className="rounded-xl">
+          <Card className="rounded-sm">
             <CardHeader>
               <CardTitle>Active Miners</CardTitle>
             </CardHeader>
@@ -112,12 +112,12 @@ export default function Network() {
                 <table className="w-full">
                   <thead>
                     <tr className="border-b border-border">
-                      <th className="text-left p-3 text-xs text-muted-foreground font-medium">Miner ID</th>
-                      <th className="text-left p-3 text-xs text-muted-foreground font-medium">Address</th>
-                      <th className="text-left p-3 text-xs text-muted-foreground font-medium">Stake</th>
-                      <th className="text-left p-3 text-xs text-muted-foreground font-medium">Uptime</th>
-                      <th className="text-left p-3 text-xs text-muted-foreground font-medium">Status</th>
-                      <th className="text-left p-3 text-xs text-muted-foreground font-medium">Rewards</th>
+                      <th className="text-left p-3 text-xs text-muted-foreground font-light">Miner ID</th>
+                      <th className="text-left p-3 text-xs text-muted-foreground font-light">Address</th>
+                      <th className="text-left p-3 text-xs text-muted-foreground font-light">Stake</th>
+                      <th className="text-left p-3 text-xs text-muted-foreground font-light">Uptime</th>
+                      <th className="text-left p-3 text-xs text-muted-foreground font-light">Status</th>
+                      <th className="text-left p-3 text-xs text-muted-foreground font-light">Rewards</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -132,7 +132,7 @@ export default function Network() {
                             {miner.status}
                           </Badge>
                         </td>
-                        <td className="p-3 text-sm font-medium">{miner.rewards}</td>
+                        <td className="p-3 text-sm font-light">{miner.rewards}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -143,7 +143,7 @@ export default function Network() {
         </TabsContent>
 
         <TabsContent value="validators">
-          <Card className="rounded-xl">
+          <Card className="rounded-sm">
             <CardHeader>
               <CardTitle>Active Validators</CardTitle>
             </CardHeader>
@@ -152,12 +152,12 @@ export default function Network() {
                 <table className="w-full">
                   <thead>
                     <tr className="border-b border-border">
-                      <th className="text-left p-3 text-xs text-muted-foreground font-medium">Validator ID</th>
-                      <th className="text-left p-3 text-xs text-muted-foreground font-medium">Address</th>
-                      <th className="text-left p-3 text-xs text-muted-foreground font-medium">Stake</th>
-                      <th className="text-left p-3 text-xs text-muted-foreground font-medium">Uptime</th>
-                      <th className="text-left p-3 text-xs text-muted-foreground font-medium">Status</th>
-                      <th className="text-left p-3 text-xs text-muted-foreground font-medium">Validations</th>
+                      <th className="text-left p-3 text-xs text-muted-foreground font-light">Validator ID</th>
+                      <th className="text-left p-3 text-xs text-muted-foreground font-light">Address</th>
+                      <th className="text-left p-3 text-xs text-muted-foreground font-light">Stake</th>
+                      <th className="text-left p-3 text-xs text-muted-foreground font-light">Uptime</th>
+                      <th className="text-left p-3 text-xs text-muted-foreground font-light">Status</th>
+                      <th className="text-left p-3 text-xs text-muted-foreground font-light">Validations</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -173,7 +173,7 @@ export default function Network() {
                             {validator.status}
                           </Badge>
                         </td>
-                        <td className="p-3 text-sm font-medium">{validator.validations}</td>
+                        <td className="p-3 text-sm font-light">{validator.validations}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -184,7 +184,7 @@ export default function Network() {
         </TabsContent>
 
         <TabsContent value="models">
-          <Card className="rounded-xl">
+          <Card className="rounded-sm">
             <CardHeader>
               <CardTitle>Supported AI Models</CardTitle>
             </CardHeader>
@@ -193,11 +193,11 @@ export default function Network() {
                 {supportedModels.map((model) => (
                   <div
                     key={model.name}
-                    className="p-4 rounded-lg border border-border hover:border-primary/50 transition-colors"
+                    className="p-4 rounded-sm border border-border hover:border-primary/50 transition-colors"
                   >
                     <div className="flex items-start justify-between mb-3">
                       <div>
-                        <h4 className="font-medium mb-1">{model.name}</h4>
+                        <h4 className="font-light mb-1">{model.name}</h4>
                         <p className="text-xs text-muted-foreground">{model.provider}</p>
                       </div>
                       <Badge variant="default" className="text-xs">
@@ -206,7 +206,7 @@ export default function Network() {
                     </div>
                     <div className="text-sm">
                       <span className="text-muted-foreground">Requests: </span>
-                      <span className="font-medium">{model.requests}</span>
+                      <span className="font-light">{model.requests}</span>
                     </div>
                   </div>
                 ))}

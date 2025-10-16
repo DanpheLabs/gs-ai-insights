@@ -42,7 +42,7 @@ export default function Profile() {
   return (
     <div className="p-8 max-w-5xl mx-auto bg-background">
       <div className="flex justify-between items-center mb-8">
-        <h1 className="text-3xl font-bold">User Profile</h1>
+        <h1 className="text-3xl font-medium">User Profile</h1>
         {!isEditing ? (
           <Button variant="outline" onClick={() => setIsEditing(true)} className="gap-2">
             <Edit2 className="h-4 w-4" />
@@ -88,7 +88,7 @@ export default function Profile() {
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     />
                   ) : (
-                    <div className="font-medium">{formData.name}</div>
+                    <div className="font-light">{formData.name}</div>
                   )}
                 </div>
                 <div>
@@ -99,7 +99,7 @@ export default function Profile() {
                       onChange={(e) => setFormData({ ...formData, username: e.target.value })}
                     />
                   ) : (
-                    <div className="font-medium">{formData.username}</div>
+                    <div className="font-light">{formData.username}</div>
                   )}
                 </div>
                 <div className="md:col-span-2">
@@ -111,7 +111,7 @@ export default function Profile() {
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     />
                   ) : (
-                    <div className="font-medium">{formData.email}</div>
+                    <div className="font-light">{formData.email}</div>
                   )}
                 </div>
               </div>
@@ -125,7 +125,7 @@ export default function Profile() {
           <div className="text-xs text-muted-foreground mb-2">YOUR PLAN</div>
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div>
-              <div className="font-medium mb-1">Personal Plan</div>
+              <div className="font-light mb-1">Personal Plan</div>
               <div className="text-sm text-muted-foreground">8,000 tokens per month</div>
             </div>
             <Button variant="outline" className="rounded-full">
@@ -137,7 +137,7 @@ export default function Profile() {
 
       <Card className="rounded-xl">
         <CardContent className="p-8">
-          <h2 className="text-lg font-medium mb-4">Your Interests</h2>
+          <h2 className="text-lg font-light mb-4">Your Interests</h2>
           <div className="flex flex-wrap gap-3">
             {interests.map((interest) => (
               <Badge

@@ -10,7 +10,7 @@ import OptimizePrompt from "./pages/OptimizePrompt";
 import RevealPrompt from "./pages/RevealPrompt";
 import Pricing from "./pages/Pricing";
 import Documentation from "./pages/Documentation";
-import Changelog from "./pages/Changelog";
+import Roadmap from "./pages/Roadmap";
 import Contact from "./pages/Contact";
 import Community from "./pages/Community";
 import Models from "./pages/Models";
@@ -37,7 +37,7 @@ const App = () => (
             <Route path="/reveal-prompt" element={<RevealPrompt />} />
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/documentation" element={<Documentation />} />
-            <Route path="/changelog" element={<Changelog />} />
+            <Route path="/Roadmap" element={<Roadmap />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/community" element={<Community />} />
             <Route path="/models" element={<Models />} />

@@ -101,7 +101,7 @@ export default function Models() {
   return (
     <div className="p-8 bg-background min-h-screen">
       <div className="flex justify-between items-center mb-8">
-        <h1 className="text-3xl font-bold">Supported Models</h1>
+        <h1 className="text-3xl font-medium">Supported Models</h1>
         <Dialog open={open} onOpenChange={setOpen}>
           <DialogTrigger asChild>
             <Button className="gap-2">
@@ -146,41 +146,41 @@ export default function Models() {
 
       {/* Stats Overview */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-        <Card className="rounded-xl">
+        <Card className="rounded-sm">
           <CardContent className="p-6">
             <div className="flex items-center gap-3">
-              <div className="p-3 rounded-lg bg-primary/10">
+              <div className="p-3 rounded-sm bg-primary/10">
                 <CheckCircle2 className="h-5 w-5 text-primary" />
               </div>
               <div>
                 <p className="text-xs text-muted-foreground">Active Models</p>
-                <h3 className="text-2xl font-bold">{supportedModels.length}</h3>
+                <h3 className="text-2xl font-medium">{supportedModels.length}</h3>
               </div>
             </div>
           </CardContent>
         </Card>
-        <Card className="rounded-xl">
+        <Card className="rounded-sm">
           <CardContent className="p-6">
             <div className="flex items-center gap-3">
-              <div className="p-3 rounded-lg bg-primary/10">
+              <div className="p-3 rounded-sm bg-primary/10">
                 <Zap className="h-5 w-5 text-primary" />
               </div>
               <div>
                 <p className="text-xs text-muted-foreground">Total Requests</p>
-                <h3 className="text-2xl font-bold">134K</h3>
+                <h3 className="text-2xl font-medium">134K</h3>
               </div>
             </div>
           </CardContent>
         </Card>
-        <Card className="rounded-xl">
+        <Card className="rounded-sm">
           <CardContent className="p-6">
             <div className="flex items-center gap-3">
-              <div className="p-3 rounded-lg bg-primary/10">
+              <div className="p-3 rounded-sm bg-primary/10">
                 <TrendingUp className="h-5 w-5 text-primary" />
               </div>
               <div>
                 <p className="text-xs text-muted-foreground">Avg Response Time</p>
-                <h3 className="text-2xl font-bold">1.1s</h3>
+                <h3 className="text-2xl font-medium">1.1s</h3>
               </div>
             </div>
           </CardContent>
@@ -190,7 +190,7 @@ export default function Models() {
       {/* Models Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {supportedModels.map((model) => (
-          <Card key={model.name} className="rounded-xl hover:border-primary/50 transition-colors">
+          <Card key={model.name} className="rounded-sm hover:border-primary/50 transition-colors">
             <CardHeader className="pb-3">
               <div className="flex items-start justify-between">
                 <div>
@@ -207,15 +207,15 @@ export default function Models() {
               <div className="space-y-2">
                 <div className="flex justify-between text-sm">
                   <span className="text-muted-foreground">Max Tokens</span>
-                  <span className="font-medium">{model.maxTokens}</span>
+                  <span className="font-light">{model.maxTokens}</span>
                 </div>
                 <div className="flex justify-between text-sm">
                   <span className="text-muted-foreground">Latency</span>
-                  <span className="font-medium">{model.avgLatency}</span>
+                  <span className="font-light">{model.avgLatency}</span>
                 </div>
                 <div className="flex justify-between text-sm">
                   <span className="text-muted-foreground">Cost/1K</span>
-                  <span className="font-medium">{model.costPer1k}</span>
+                  <span className="font-light">{model.costPer1k}</span>
                 </div>
               </div>
               <div className="pt-2 border-t border-border">

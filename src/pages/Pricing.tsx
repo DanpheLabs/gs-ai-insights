@@ -84,7 +84,7 @@ export default function Pricing() {
     <div className="p-8 bg-background">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold mb-4">Simple Pricing, Unbeatable Value</h1>
+          <h1 className="text-5xl font-medium mb-4">Simple Pricing, Unbeatable Value</h1>
           <p className="text-muted-foreground text-lg">
             Start small and free, upgrade as you go. Take control of everything.
           </p>
@@ -108,7 +108,7 @@ export default function Pricing() {
       <CardHeader>
         <CardTitle className="text-2xl">{plan.name}</CardTitle>
         <div className="mt-4">
-          <span className="text-4xl font-bold">{plan.price}</span>
+          <span className="text-4xl font-medium">{plan.price}</span>
           <span className="text-muted-foreground">/ month</span>
         </div>
         <div className="text-sm text-muted-foreground">{plan.billing}</div>
@@ -117,14 +117,14 @@ export default function Pricing() {
 
       <CardContent>
         <div className="mb-6">
-          <table className="w-full text-sm border border-border rounded-lg overflow-hidden">
+          <table className="w-full text-sm border border-border rounded-sm overflow-hidden">
             <tbody>
               {Object.entries(plan.features).map(([name, value], i) => (
                 <tr
                   key={i}
                   className="border-b border-border last:border-none"
                 >
-                  <td className="p-3 font-medium">{name}</td>
+                  <td className="p-3 font-light">{name}</td>
                   <td className="p-3 text-right text-muted-foreground">
                     {value}
                   </td>
@@ -148,7 +148,7 @@ export default function Pricing() {
 
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-8">
-            <h2 className="text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+            <h2 className="text-4xl font-medium mb-4">Frequently Asked Questions</h2>
             <p className="text-muted-foreground">
               Many support queries and technical questions will already be answered
             </p>

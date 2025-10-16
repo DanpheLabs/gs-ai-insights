@@ -7,13 +7,13 @@ import { Checkbox } from "@/components/ui/checkbox";
 export default function Settings() {
   return (
     <div className="p-12 max-w-5xl mx-auto">
-      <h1 className="text-3xl font-bold mb-8">Settings</h1>
+      <h1 className="text-3xl font-medium mb-8">Settings</h1>
 
       <div className="flex gap-8">
         <div className="flex-shrink-0">
           <div className="w-64 h-64 bg-muted rounded-lg flex flex-col items-center justify-center text-center p-6">
             <Upload className="h-12 w-12 mb-4 text-muted-foreground" />
-            <div className="font-medium mb-2">Drag & Drop a Image</div>
+            <div className="font-light mb-2">Drag & Drop a Image</div>
             <div className="text-sm text-muted-foreground mb-2">OR</div>
             <Button variant="link" className="text-sm">
               Browse

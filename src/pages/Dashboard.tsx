@@ -28,7 +28,7 @@ export default function Dashboard() {
     <div className="flex-1 bg-background">
       <div className="p-8 space-y-6">
         <div className="flex justify-between items-center">
-          <h1 className="text-3xl font-bold">Dashboard</h1>
+          <h1 className="text-3xl font-medium">Dashboard</h1>
           <Button className="gap-2">
             <Sparkles className="h-4 w-4" />
             New Optimization
@@ -38,15 +38,15 @@ export default function Dashboard() {
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {stats.map((stat) => (
-            <Card key={stat.label} className="rounded-xl">
+            <Card key={stat.label} className="rounded-sm">
               <CardContent className="p-6">
                 <div className="flex justify-between items-start">
                   <div className="space-y-2">
                     <p className="text-sm text-muted-foreground">{stat.label}</p>
-                    <p className="text-2xl font-bold">{stat.value}</p>
+                    <p className="text-2xl font-medium">{stat.value}</p>
                     <p className="text-xs text-primary">{stat.change}</p>
                   </div>
-                  <div className={`p-3 rounded-xl bg-primary/10 ${stat.color}`}>
+                  <div className={`p-3 rounded-sm bg-primary/10 ${stat.color}`}>
                     <stat.icon className="h-5 w-5" />
                   </div>
                 </div>
@@ -57,7 +57,7 @@ export default function Dashboard() {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Recent Activity */}
-          <Card className="lg:col-span-2 rounded-xl">
+          <Card className="lg:col-span-2 rounded-sm">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Clock className="h-5 w-5" />
@@ -67,8 +67,8 @@ export default function Dashboard() {
             <CardContent>
               <div className="space-y-4">
                 {recentActivity.map((activity, index) => (
-                  <div key={index} className="flex items-start gap-4 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors">
-                    <div className={`p-2 rounded-lg ${activity.type === 'optimize' ? 'bg-primary/10 text-primary' : 'bg-accent/10 text-accent'}`}>
+                  <div key={index} className="flex items-start gap-4 p-4 rounded-sm bg-muted/50 hover:bg-muted transition-colors">
+                    <div className={`p-2 rounded-sm ${activity.type === 'optimize' ? 'bg-primary/10 text-primary' : 'bg-accent/10 text-accent'}`}>
                       {activity.type === 'optimize' ? (
                         <Sparkles className="h-4 w-4" />
                       ) : (
@@ -76,7 +76,7 @@ export default function Dashboard() {
                       )}
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="font-medium text-sm">{activity.action}</p>
+                      <p className="font-light text-sm">{activity.action}</p>
                       <p className="text-sm text-muted-foreground truncate">{activity.prompt}</p>
                       <p className="text-xs text-muted-foreground mt-1">{activity.time}</p>
                     </div>
@@ -87,7 +87,7 @@ export default function Dashboard() {
           </Card>
 
           {/* AI Model Usage */}
-          <Card className="rounded-xl">
+          <Card className="rounded-sm">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Zap className="h-5 w-5" />
@@ -99,7 +99,7 @@ export default function Dashboard() {
                 {usageData.map((model) => (
                   <div key={model.model} className="space-y-2">
                     <div className="flex justify-between items-center">
-                      <span className="text-sm font-medium">{model.model}</span>
+                      <span className="text-sm font-light">{model.model}</span>
                       <span className="text-sm text-muted-foreground">{model.usage} uses</span>
                     </div>
                     <Progress value={model.percentage} className="h-2" />
@@ -110,37 +110,7 @@ export default function Dashboard() {
           </Card>
         </div>
 
-        {/* Quick Actions */}
-        <Card className="rounded-xl">
-          <CardHeader>
-            <CardTitle>Quick Actions</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <Button variant="outline" className="justify-start gap-2 h-auto py-4 rounded-xl">
-                <Sparkles className="h-5 w-5" />
-                <div className="text-left">
-                  <div className="font-medium">Optimize Prompt</div>
-                  <div className="text-xs text-muted-foreground">Improve your AI prompts</div>
-                </div>
-              </Button>
-              <Button variant="outline" className="justify-start gap-2 h-auto py-4 rounded-xl">
-                <Eye className="h-5 w-5" />
-                <div className="text-left">
-                  <div className="font-medium">Reveal Prompt</div>
-                  <div className="text-xs text-muted-foreground">Reverse engineer prompts</div>
-                </div>
-              </Button>
-              <Button variant="outline" className="justify-start gap-2 h-auto py-4 rounded-xl">
-                <Activity className="h-5 w-5" />
-                <div className="text-left">
-                  <div className="font-medium">View Analytics</div>
-                  <div className="text-xs text-muted-foreground">Track your performance</div>
-                </div>
-              </Button>
-            </div>
-          </CardContent>
-        </Card>
+ 
       </div>
     </div>
   );

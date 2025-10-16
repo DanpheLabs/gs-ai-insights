@@ -42,7 +42,7 @@ html, body {
 
     --border: 240 5% 93%;
     --input: 240 6% 90%;
-    --ring: 262 83% 58%;
+    --ring: 236 100% 74%;
 
     --radius: 0.75rem;
 
@@ -53,10 +53,10 @@ html, body {
     --sidebar-accent: 240 5% 96%;
     --sidebar-accent-foreground: 0 0% 20%;
     --sidebar-border: 240 6% 90%;
-    --sidebar-ring: 262 83% 58%;
+    --sidebar-ring: 236 100% 74%;
 
     /* Brand gradient */
-    --gradient-brand: linear-gradient(135deg, hsl(262 83% 58%), hsl(250 90% 65%));
+    --gradient-brand: linear-gradient(135deg, hsl(236 100% 74%), hsl(250 90% 65%));
     
     /* Shadows */
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
@@ -74,7 +74,7 @@ html, body {
     --popover: 0 0% 10%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 262 60% 50%;
+    --primary: 236 100% 74%;
     --primary-foreground: 0 0% 100%;
     --primary-glow: 262 90% 70%;
 
@@ -84,7 +84,7 @@ html, body {
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 60%;
 
-    --accent: 262 83% 58%;
+    --accent: 236 100% 74%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62% 50%;
@@ -92,7 +92,7 @@ html, body {
 
     --border: 0 0% 20%;
     --input: 0 0% 20%;
-    --ring: 262 83% 58%;
+    --ring: 236 100% 74%;
 
     --sidebar-background: 0 0% 10%;
     --sidebar-foreground: 0 0% 90%;
@@ -101,7 +101,7 @@ html, body {
     --sidebar-accent: 0 0% 15%;
     --sidebar-accent-foreground: 0 0% 95%;
     --sidebar-border: 0 0% 20%;
-    --sidebar-ring: 262 83% 58%;
+    --sidebar-ring: 236 100% 74%;
   }
 }
 
