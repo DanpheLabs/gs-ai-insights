@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
-export default function Dashboard() {
+export default function Network() {
   const images = [
     "https://images.unsplash.com/photo-1506905925346-21bda4d32df4",
     "https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f",
@@ -14,17 +14,8 @@ export default function Dashboard() {
   ];
 
   return (
-
-          <div 
-        className="flex-1  bg-[size:0px_0px] bg-[linear-gradient(to_right,rgba(0,0,0,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.05)_1px,transparent_1px)] ">
-
-    <div className="p-8">
-      
-
-
-
-      
-      <h1 className="text-3xl font-bold mb-8">Dashboard</h1>
+    <div className="p-8 bg-background">
+      <h1 className="text-3xl font-bold mb-8">Network</h1>
 
       <Tabs defaultValue="generations" className="mb-6">
         <TabsList>
@@ -53,7 +44,6 @@ export default function Dashboard() {
           </div>
         ))}
       </div>
-    </div>
     </div>
   );
 }
